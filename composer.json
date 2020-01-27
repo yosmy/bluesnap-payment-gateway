@@ -1,0 +1,46 @@
+{
+    "name": "yosmy/bluesnap-payment-gateway",
+    "description": "",
+    "require": {
+        "php": ">=7.2",
+        "ext-mongodb": "*",
+        "ext-json": "*",
+        "yosmy/mongo": "@dev",
+        "yosmy/http": "@dev",
+        "yosmy/log": "@dev",
+        "yosmy/payment-gateway": "@dev"
+    },
+    "require-dev": {
+        "symsonte/framework": "@dev",
+        "symfony/debug": "^4.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yosmy\\Payment\\Gateway\\Bluesnap\\": [
+                "src/card",
+                "src/charge",
+                "src/communication",
+                "src/customer",
+                "src/exception"
+            ]
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Yosmy\\Payment\\Gateway\\Bluesnap\\Test\\": [
+                "test/setup",
+                "test/src/card",
+                "test/src/charge",
+                "test/src/customer"
+            ]
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://php.yosmy.com"
+        }
+    ],
+    "prefer-stable": true,
+    "minimum-stability": "dev"
+}
